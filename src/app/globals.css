@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #121120;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.gradient-border {
+  position: relative;
+  padding: 13px 18px;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50px;
+  border: 3px solid transparent;
+  background: linear-gradient(45deg, #5a5a5a, #ffffff03) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+
+.shadow-effect {
+  box-shadow: -2px 1px 38px 10px rgba(71, 40, 211, 1);
+  -webkit-box-shadow: -2px 1px 38px 10px rgba(71, 40, 211, 1);
+  -moz-box-shadow: -2px 1px 38px 10px rgba(71, 40, 211, 1);
+}
+
+.shadow-effect-2 {
+  box-shadow: -2px 1px 69px -3px rgba(71, 40, 211, 1);
+  -webkit-box-shadow: -2px 1px 69px -3px rgba(71, 40, 211, 1);
+  -moz-box-shadow: -2px 1px 69px -3px rgba(71, 40, 211, 1);
+}
+
+.mySwiper .swiper-pagination-bullet {
+  background-color: #4728d3;
+}
